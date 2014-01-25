@@ -31,6 +31,7 @@
 		464E05D61893964100BE5AB4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D51893964100BE5AB4 /* Security.framework */; };
 		464E05D81893964600BE5AB4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D71893964600BE5AB4 /* StoreKit.framework */; };
 		464E05DA1893965000BE5AB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D91893965000BE5AB4 /* SystemConfiguration.framework */; };
+		464E05DD18939B9500BE5AB4 /* MBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05DC18939B9500BE5AB4 /* MBLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		464E05D51893964100BE5AB4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		464E05D71893964600BE5AB4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		464E05D91893965000BE5AB4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		464E05DB18939B9500BE5AB4 /* MBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBLoginViewController.h; sourceTree = "<group>"; };
+		464E05DC18939B9500BE5AB4 /* MBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 				464E05A41893942B00BE5AB4 /* Main.storyboard */,
 				464E05A71893942B00BE5AB4 /* MBTweetsTableViewController.h */,
 				464E05A81893942B00BE5AB4 /* MBTweetsTableViewController.m */,
+				464E05DB18939B9500BE5AB4 /* MBLoginViewController.h */,
+				464E05DC18939B9500BE5AB4 /* MBLoginViewController.m */,
 				464E05AA1893942B00BE5AB4 /* Images.xcassets */,
 				464E05991893942B00BE5AB4 /* Supporting Files */,
 			);
@@ -291,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				464E059F1893942B00BE5AB4 /* main.m in Sources */,
+				464E05DD18939B9500BE5AB4 /* MBLoginViewController.m in Sources */,
 				464E05A91893942B00BE5AB4 /* MBTweetsTableViewController.m in Sources */,
 				464E05A31893942B00BE5AB4 /* MBAppDelegate.m in Sources */,
 			);
@@ -377,6 +383,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -409,6 +416,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

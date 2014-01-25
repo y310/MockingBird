@@ -24,14 +24,40 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="MockingBird" id="lgx-nh-ts6">
-                        <barButtonItem key="leftBarButtonItem" title="Login" id="Kdh-Vy-aq7"/>
+                        <barButtonItem key="leftBarButtonItem" title="Login" id="Kdh-Vy-aq7">
+                            <connections>
+                                <action selector="logInOrLogOut:" destination="iPH-8l-gth" id="6eD-Ki-JIX"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="RSe-mA-pte"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="loginOrLogoutBarButtonItem" destination="Kdh-Vy-aq7" id="U6W-kZ-u6x"/>
+                        <segue destination="wXy-Qg-hxE" kind="modal" identifier="showLogin" id="u7P-T7-ucC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hi-iB-VGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Tw1-xX-LyO"/>
+                <customObject id="eB0-jc-g21" customClass="PFLogInViewController"/>
             </objects>
             <point key="canvasLocation" x="-37" y="-190"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="FQd-6J-v4n">
+            <objects>
+                <viewController id="wXy-Qg-hxE" customClass="MBLoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vkL-N9-bpD"/>
+                        <viewControllerLayoutGuide type="bottom" id="s2q-lt-A0P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SeJ-Lt-ytJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSB-3y-Jf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37" y="-874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ywQ-Co-KMT">

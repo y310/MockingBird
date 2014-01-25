@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MBTweetsTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *loginOrLogoutBarButtonItem;
+- (IBAction)logInOrLogOut:(id)sender;
 
 @end
