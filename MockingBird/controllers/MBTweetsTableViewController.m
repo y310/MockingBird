@@ -7,10 +7,12 @@
 //
 
 #import "MBLoginViewController.h"
+#import "MBTweet.h"
+#import "MBTweetViewController.h"
 #import "MBTweetsTableViewController.h"
 
 @interface MBTweetsTableViewController ()
-
+@property (strong) NSMutableArray *tweets;
 @end
 
 @implementation MBTweetsTableViewController
@@ -27,11 +29,24 @@
                                              selector:@selector(_loginSucceeded:)
                                                  name:PFLogInSuccessNotification
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_tweetSucceeded:)
+                                                 name:MBTweetSuccessNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_tweetFailed:)
+                                                 name:MBTweetFailureNotification
+                                               object:nil];
+    [self.refreshControl addTarget:self
+                            action:@selector(_refresh)
+                  forControlEvents:UIControlEventValueChanged];
+
     if ([PFUser currentUser]) {
         [self _setStateLogout];
     } else {
         [self _setStateLogin];
     }
+    [self _refresh];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +62,10 @@
         [PFUser logOut];
         [self _setStateLogin];
     }
+}
+
+- (IBAction)firstViewReturnActionForSegue:(UIStoryboardSegue *)segue
+{
 }
 
 - (void)_signupSucceeded:(NSNotification *)notification
@@ -65,12 +84,56 @@
 {
     self.loginOrLogoutBarButtonItem.tag = 0;
     self.loginOrLogoutBarButtonItem.title = @"Login";
+    self.navigationItem.rightBarButtonItem = nil;
 }
 
 - (void)_setStateLogout
 {
     self.loginOrLogoutBarButtonItem.tag = 1;
     self.loginOrLogoutBarButtonItem.title = @"Logout";
+    self.navigationItem.rightBarButtonItem = self.tweetBarButtonItem;
 }
 
+- (void)_tweetSucceeded:(NSNotification *)notification
+{
+    [self _refresh];
+}
+
+- (void)_tweetFailed:(NSNotification *)notification
+{
+}
+
+- (void)_refresh
+{
+    PFQuery *query = [MBTweet query];
+    [query orderByDescending:@"createdAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            [self.tweets removeAllObjects];
+            self.tweets =  [objects mutableCopy];
+            [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+        }
+    }];
+}
+
+#pragma mark UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.tweets.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MBTweet *tweet = self.tweets[indexPath.row];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.textLabel.text = tweet.message;
+    return cell;
+}
 @end

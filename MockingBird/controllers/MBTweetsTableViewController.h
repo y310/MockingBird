@@ -10,6 +10,7 @@
 
 @interface MBTweetsTableViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *loginOrLogoutBarButtonItem;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *tweetBarButtonItem;
 - (IBAction)logInOrLogOut:(id)sender;
 
 @end

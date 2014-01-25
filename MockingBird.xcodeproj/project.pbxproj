@@ -32,6 +32,8 @@
 		464E05DA1893965000BE5AB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D91893965000BE5AB4 /* SystemConfiguration.framework */; };
 		464E05E61893AAE000BE5AB4 /* MBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05E31893AAE000BE5AB4 /* MBLoginViewController.m */; };
 		464E05E71893AAE000BE5AB4 /* MBTweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05E51893AAE000BE5AB4 /* MBTweetsTableViewController.m */; };
+		464E05EA1893AB3E00BE5AB4 /* MBTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05E91893AB3E00BE5AB4 /* MBTweet.m */; };
+		464E05ED1893AC3D00BE5AB4 /* MBTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05EC1893AC3D00BE5AB4 /* MBTweetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,10 @@
 		464E05E31893AAE000BE5AB4 /* MBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBLoginViewController.m; sourceTree = "<group>"; };
 		464E05E41893AAE000BE5AB4 /* MBTweetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTweetsTableViewController.h; sourceTree = "<group>"; };
 		464E05E51893AAE000BE5AB4 /* MBTweetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTweetsTableViewController.m; sourceTree = "<group>"; };
+		464E05E81893AB3E00BE5AB4 /* MBTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTweet.h; sourceTree = "<group>"; };
+		464E05E91893AB3E00BE5AB4 /* MBTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTweet.m; sourceTree = "<group>"; };
+		464E05EB1893AC3D00BE5AB4 /* MBTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTweetViewController.h; sourceTree = "<group>"; };
+		464E05EC1893AC3D00BE5AB4 /* MBTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTweetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +205,8 @@
 		464E05DF1893AA8400BE5AB4 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				464E05E81893AB3E00BE5AB4 /* MBTweet.h */,
+				464E05E91893AB3E00BE5AB4 /* MBTweet.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -217,6 +225,8 @@
 				464E05E31893AAE000BE5AB4 /* MBLoginViewController.m */,
 				464E05E41893AAE000BE5AB4 /* MBTweetsTableViewController.h */,
 				464E05E51893AAE000BE5AB4 /* MBTweetsTableViewController.m */,
+				464E05EB1893AC3D00BE5AB4 /* MBTweetViewController.h */,
+				464E05EC1893AC3D00BE5AB4 /* MBTweetViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -320,7 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				464E059F1893942B00BE5AB4 /* main.m in Sources */,
+				464E05ED1893AC3D00BE5AB4 /* MBTweetViewController.m in Sources */,
 				464E05E61893AAE000BE5AB4 /* MBLoginViewController.m in Sources */,
+				464E05EA1893AB3E00BE5AB4 /* MBTweet.m in Sources */,
 				464E05E71893AAE000BE5AB4 /* MBTweetsTableViewController.m in Sources */,
 				464E05A31893942B00BE5AB4 /* MBAppDelegate.m in Sources */,
 			);

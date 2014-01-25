@@ -7,11 +7,13 @@
 //
 
 #import "MBAppDelegate.h"
+#import "MBTweet.h"
 
 @implementation MBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [MBTweet registerSubclass];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [Parse setApplicationId:[userDefaults stringForKey:@"app_id"]
                   clientKey:[userDefaults stringForKey:@"client_key"]];
