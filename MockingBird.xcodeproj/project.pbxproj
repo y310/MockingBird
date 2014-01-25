@@ -14,13 +14,23 @@
 		464E059F1893942B00BE5AB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E059E1893942B00BE5AB4 /* main.m */; };
 		464E05A31893942B00BE5AB4 /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05A21893942B00BE5AB4 /* MBAppDelegate.m */; };
 		464E05A61893942B00BE5AB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 464E05A41893942B00BE5AB4 /* Main.storyboard */; };
-		464E05A91893942B00BE5AB4 /* MBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05A81893942B00BE5AB4 /* MBViewController.m */; };
+		464E05A91893942B00BE5AB4 /* MBTweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05A81893942B00BE5AB4 /* MBTweetsTableViewController.m */; };
 		464E05AB1893942B00BE5AB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 464E05AA1893942B00BE5AB4 /* Images.xcassets */; };
 		464E05B21893942B00BE5AB4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05B11893942B00BE5AB4 /* XCTest.framework */; };
 		464E05B31893942B00BE5AB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05921893942B00BE5AB4 /* Foundation.framework */; };
 		464E05B41893942B00BE5AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05961893942B00BE5AB4 /* UIKit.framework */; };
 		464E05BC1893942B00BE5AB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 464E05BA1893942B00BE5AB4 /* InfoPlist.strings */; };
 		464E05BE1893942B00BE5AB4 /* MockingBirdTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05BD1893942B00BE5AB4 /* MockingBirdTests.m */; };
+		464E05C8189395DD00BE5AB4 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05C7189395DD00BE5AB4 /* Parse.framework */; };
+		464E05CA1893960E00BE5AB4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05C91893960E00BE5AB4 /* AudioToolbox.framework */; };
+		464E05CC1893961400BE5AB4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05CB1893961400BE5AB4 /* CFNetwork.framework */; };
+		464E05CE1893962000BE5AB4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05CD1893962000BE5AB4 /* CoreLocation.framework */; };
+		464E05D01893962900BE5AB4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05CF1893962900BE5AB4 /* libz.dylib */; };
+		464E05D21893963100BE5AB4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D11893963100BE5AB4 /* MobileCoreServices.framework */; };
+		464E05D41893963900BE5AB4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D31893963900BE5AB4 /* QuartzCore.framework */; };
+		464E05D61893964100BE5AB4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D51893964100BE5AB4 /* Security.framework */; };
+		464E05D81893964600BE5AB4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D71893964600BE5AB4 /* StoreKit.framework */; };
+		464E05DA1893965000BE5AB4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464E05D91893965000BE5AB4 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +55,24 @@
 		464E05A11893942B00BE5AB4 /* MBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBAppDelegate.h; sourceTree = "<group>"; };
 		464E05A21893942B00BE5AB4 /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
 		464E05A51893942B00BE5AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		464E05A71893942B00BE5AB4 /* MBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBViewController.h; sourceTree = "<group>"; };
-		464E05A81893942B00BE5AB4 /* MBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBViewController.m; sourceTree = "<group>"; };
+		464E05A71893942B00BE5AB4 /* MBTweetsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBTweetsTableViewController.h; sourceTree = "<group>"; };
+		464E05A81893942B00BE5AB4 /* MBTweetsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBTweetsTableViewController.m; sourceTree = "<group>"; };
 		464E05AA1893942B00BE5AB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		464E05B01893942B00BE5AB4 /* MockingBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockingBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		464E05B11893942B00BE5AB4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		464E05B91893942B00BE5AB4 /* MockingBirdTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MockingBirdTests-Info.plist"; sourceTree = "<group>"; };
 		464E05BB1893942B00BE5AB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		464E05BD1893942B00BE5AB4 /* MockingBirdTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockingBirdTests.m; sourceTree = "<group>"; };
+		464E05C7189395DD00BE5AB4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		464E05C91893960E00BE5AB4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		464E05CB1893961400BE5AB4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		464E05CD1893962000BE5AB4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		464E05CF1893962900BE5AB4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		464E05D11893963100BE5AB4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		464E05D31893963900BE5AB4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		464E05D51893964100BE5AB4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		464E05D71893964600BE5AB4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		464E05D91893965000BE5AB4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +80,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464E05DA1893965000BE5AB4 /* SystemConfiguration.framework in Frameworks */,
+				464E05D81893964600BE5AB4 /* StoreKit.framework in Frameworks */,
+				464E05D61893964100BE5AB4 /* Security.framework in Frameworks */,
+				464E05D41893963900BE5AB4 /* QuartzCore.framework in Frameworks */,
+				464E05D21893963100BE5AB4 /* MobileCoreServices.framework in Frameworks */,
+				464E05D01893962900BE5AB4 /* libz.dylib in Frameworks */,
+				464E05CE1893962000BE5AB4 /* CoreLocation.framework in Frameworks */,
+				464E05CC1893961400BE5AB4 /* CFNetwork.framework in Frameworks */,
+				464E05CA1893960E00BE5AB4 /* AudioToolbox.framework in Frameworks */,
 				464E05951893942B00BE5AB4 /* CoreGraphics.framework in Frameworks */,
 				464E05971893942B00BE5AB4 /* UIKit.framework in Frameworks */,
+				464E05C8189395DD00BE5AB4 /* Parse.framework in Frameworks */,
 				464E05931893942B00BE5AB4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +131,16 @@
 		464E05911893942B00BE5AB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				464E05D91893965000BE5AB4 /* SystemConfiguration.framework */,
+				464E05D71893964600BE5AB4 /* StoreKit.framework */,
+				464E05D51893964100BE5AB4 /* Security.framework */,
+				464E05D31893963900BE5AB4 /* QuartzCore.framework */,
+				464E05D11893963100BE5AB4 /* MobileCoreServices.framework */,
+				464E05CF1893962900BE5AB4 /* libz.dylib */,
+				464E05CD1893962000BE5AB4 /* CoreLocation.framework */,
+				464E05CB1893961400BE5AB4 /* CFNetwork.framework */,
+				464E05C91893960E00BE5AB4 /* AudioToolbox.framework */,
+				464E05C7189395DD00BE5AB4 /* Parse.framework */,
 				464E05921893942B00BE5AB4 /* Foundation.framework */,
 				464E05941893942B00BE5AB4 /* CoreGraphics.framework */,
 				464E05961893942B00BE5AB4 /* UIKit.framework */,
@@ -115,8 +155,8 @@
 				464E05A11893942B00BE5AB4 /* MBAppDelegate.h */,
 				464E05A21893942B00BE5AB4 /* MBAppDelegate.m */,
 				464E05A41893942B00BE5AB4 /* Main.storyboard */,
-				464E05A71893942B00BE5AB4 /* MBViewController.h */,
-				464E05A81893942B00BE5AB4 /* MBViewController.m */,
+				464E05A71893942B00BE5AB4 /* MBTweetsTableViewController.h */,
+				464E05A81893942B00BE5AB4 /* MBTweetsTableViewController.m */,
 				464E05AA1893942B00BE5AB4 /* Images.xcassets */,
 				464E05991893942B00BE5AB4 /* Supporting Files */,
 			);
@@ -251,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				464E059F1893942B00BE5AB4 /* main.m in Sources */,
-				464E05A91893942B00BE5AB4 /* MBViewController.m in Sources */,
+				464E05A91893942B00BE5AB4 /* MBTweetsTableViewController.m in Sources */,
 				464E05A31893942B00BE5AB4 /* MBAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +419,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mito/work/MockingBird,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MockingBird/MockingBird-Prefix.pch";
 				INFOPLIST_FILE = "MockingBird/MockingBird-Info.plist";
@@ -392,6 +436,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mito/work/MockingBird,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MockingBird/MockingBird-Prefix.pch";
 				INFOPLIST_FILE = "MockingBird/MockingBird-Info.plist";
