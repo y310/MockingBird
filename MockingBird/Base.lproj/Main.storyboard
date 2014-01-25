@@ -13,13 +13,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="QCo-FY-j5c">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="QCo-FY-j5c">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QCo-FY-j5c" id="ndG-E5-uRa">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="GmN-01-ExF" kind="push" identifier="showDetail" id="AIR-uS-qWd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -64,7 +67,64 @@
             </objects>
             <point key="canvasLocation" x="464" y="-190"/>
         </scene>
-        <!--Tweet View Controller - Tweet-->
+        <!--Tweet Detail View Controller - Tweet-->
+        <scene sceneID="fEN-O4-wIL">
+            <objects>
+                <viewController id="GmN-01-ExF" customClass="MBTweetDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Esv-TM-b7H"/>
+                        <viewControllerLayoutGuide type="bottom" id="zDU-sN-pfB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iHd-O4-T1j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-TX-Rdi">
+                                <rect key="frame" x="20" y="80" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="message" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="inK-Bd-aWg">
+                                <rect key="frame" x="20" y="111" width="280" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="X8e-V0-1cI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014/01/25 14:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzV-xF-YP4">
+                                <rect key="frame" x="20" y="144" width="99" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TZK-TX-Rdi" firstAttribute="leading" secondItem="IzV-xF-YP4" secondAttribute="leading" id="2jK-sN-bm4"/>
+                            <constraint firstItem="IzV-xF-YP4" firstAttribute="top" secondItem="inK-Bd-aWg" secondAttribute="bottom" constant="10" id="80x-yY-4fM"/>
+                            <constraint firstItem="TZK-TX-Rdi" firstAttribute="leading" secondItem="inK-Bd-aWg" secondAttribute="leading" id="9SF-vk-Gjq"/>
+                            <constraint firstItem="TZK-TX-Rdi" firstAttribute="leading" secondItem="iHd-O4-T1j" secondAttribute="leading" constant="20" symbolic="YES" id="axx-vV-gL8"/>
+                            <constraint firstItem="inK-Bd-aWg" firstAttribute="top" secondItem="TZK-TX-Rdi" secondAttribute="bottom" constant="10" id="frC-Bg-EfM"/>
+                            <constraint firstItem="TZK-TX-Rdi" firstAttribute="top" secondItem="Esv-TM-b7H" secondAttribute="bottom" constant="16" id="wIt-Ym-UxC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tweet" id="xkB-Yn-EvM"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="inK-Bd-aWg" id="tfK-Z8-jGA"/>
+                        <outlet property="tweetedAtLabel" destination="IzV-xF-YP4" id="gP7-8j-fx0"/>
+                        <outlet property="usernameLabel" destination="TZK-TX-Rdi" id="yx1-9u-J8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1EW-ro-QiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="509"/>
+        </scene>
+        <!--Tweet View Controller-->
         <scene sceneID="iA8-sN-N8h">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="I6P-Sn-Q5u" customClass="MBTweetViewController" sceneMemberID="viewController">
@@ -76,8 +136,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV0-ta-mQH">
-                                <rect key="frame" x="0.0" y="65" width="320" height="193"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV0-ta-mQH">
+                                <rect key="frame" x="0.0" y="64" width="320" height="194"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -91,7 +151,7 @@
                             <constraint firstItem="RV0-ta-mQH" firstAttribute="top" secondItem="lxX-gq-CbK" secondAttribute="bottom" id="VOH-vO-218"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tweet" id="Pdh-Zd-KFJ">
+                    <navigationItem key="navigationItem" id="Pdh-Zd-KFJ">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="sXE-cu-S6K">
                             <connections>
                                 <segue destination="CCO-HD-t3g" kind="unwind" unwindAction="firstViewReturnActionForSegue:" id="6h0-XG-aTw"/>

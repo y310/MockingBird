@@ -8,6 +8,7 @@
 
 #import "MBLoginViewController.h"
 #import "MBTweet.h"
+#import "MBTweetDetailViewController.h"
 #import "MBTweetViewController.h"
 #import "MBTweetsTableViewController.h"
 
@@ -68,6 +69,14 @@
 {
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showDetail"]) {
+        MBTweetDetailViewController *controller = segue.destinationViewController;
+        controller.tweet = self.tweets[[self.tableView indexPathForSelectedRow].row];
+    }
+}
+
 - (void)_signupSucceeded:(NSNotification *)notification
 {
     [self _setStateLogout];
@@ -106,6 +115,7 @@
 - (void)_refresh
 {
     PFQuery *query = [MBTweet query];
+    [query includeKey:@"user"];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
@@ -136,4 +146,5 @@
     cell.textLabel.text = tweet.message;
     return cell;
 }
+
 @end

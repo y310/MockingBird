@@ -34,6 +34,7 @@
 		464E05E71893AAE000BE5AB4 /* MBTweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05E51893AAE000BE5AB4 /* MBTweetsTableViewController.m */; };
 		464E05EA1893AB3E00BE5AB4 /* MBTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05E91893AB3E00BE5AB4 /* MBTweet.m */; };
 		464E05ED1893AC3D00BE5AB4 /* MBTweetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05EC1893AC3D00BE5AB4 /* MBTweetViewController.m */; };
+		464E05F01893E84400BE5AB4 /* MBTweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05EF1893E84400BE5AB4 /* MBTweetDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		464E05E91893AB3E00BE5AB4 /* MBTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTweet.m; sourceTree = "<group>"; };
 		464E05EB1893AC3D00BE5AB4 /* MBTweetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTweetViewController.h; sourceTree = "<group>"; };
 		464E05EC1893AC3D00BE5AB4 /* MBTweetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTweetViewController.m; sourceTree = "<group>"; };
+		464E05EE1893E84400BE5AB4 /* MBTweetDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBTweetDetailViewController.h; sourceTree = "<group>"; };
+		464E05EF1893E84400BE5AB4 /* MBTweetDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTweetDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +230,8 @@
 				464E05E51893AAE000BE5AB4 /* MBTweetsTableViewController.m */,
 				464E05EB1893AC3D00BE5AB4 /* MBTweetViewController.h */,
 				464E05EC1893AC3D00BE5AB4 /* MBTweetViewController.m */,
+				464E05EE1893E84400BE5AB4 /* MBTweetDetailViewController.h */,
+				464E05EF1893E84400BE5AB4 /* MBTweetDetailViewController.m */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				464E05ED1893AC3D00BE5AB4 /* MBTweetViewController.m in Sources */,
 				464E05E61893AAE000BE5AB4 /* MBLoginViewController.m in Sources */,
 				464E05EA1893AB3E00BE5AB4 /* MBTweet.m in Sources */,
+				464E05F01893E84400BE5AB4 /* MBTweetDetailViewController.m in Sources */,
 				464E05E71893AAE000BE5AB4 /* MBTweetsTableViewController.m in Sources */,
 				464E05A31893942B00BE5AB4 /* MBAppDelegate.m in Sources */,
 			);
