@@ -10,7 +10,9 @@
 
 @interface MBTweetDetailViewController : UIViewController
 @property (weak, nonatomic) MBTweet *tweet;
+@property (weak, nonatomic) IBOutlet UIScrollView *scollView;
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tweetedAtLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end

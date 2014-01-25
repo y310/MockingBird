@@ -10,4 +10,6 @@
 @property (strong) NSString *message;
 @property (strong) PFUser *user;
 + (NSString *)parseClassName;
+- (void)getImageWithCompletion:(void(^)(UIImage *))completion;
+- (void)setImage:(UIImage *)image withCompletion:(void(^)())completion;
 @end

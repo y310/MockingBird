@@ -25,6 +25,15 @@
     dateFormatter.timeStyle = NSDateFormatterMediumStyle;
     self.tweetedAtLabel.text = [dateFormatter stringFromDate:self.tweet.createdAt];
     [self.messageLabel sizeToFit];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.tweet getImageWithCompletion:^(UIImage *image) {
+        self.imageView.image = image;
+    }];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    self.scollView.contentSize = CGSizeMake(320, CGRectGetMaxY(self.imageView.frame) + 40.0f);
 }
 
 - (void)didReceiveMemoryWarning

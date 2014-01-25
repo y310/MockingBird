@@ -12,4 +12,5 @@ extern NSString *const MBTweetFailureNotification;
 @interface MBTweetViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *tweetTextView;
 - (IBAction)tweet:(id)sender;
+- (void)uploadPhoto:(id)sender;
 @end
