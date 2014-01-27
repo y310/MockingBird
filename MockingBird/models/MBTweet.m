@@ -40,4 +40,12 @@
     }];
 }
 
+- (NSString *)tweetedAt
+{
+    NSDateFormatter *dateFormatter = [NSDateFormatter new];
+    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
+    dateFormatter.timeStyle = NSDateFormatterMediumStyle;
+    return [dateFormatter stringFromDate:self.createdAt];
+}
+
 @end

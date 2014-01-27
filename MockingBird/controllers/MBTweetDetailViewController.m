@@ -20,10 +20,7 @@
     [super viewDidLoad];
     self.usernameLabel.text = self.tweet.user.username;
     self.messageLabel.text = self.tweet.message;
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    dateFormatter.dateStyle = NSDateFormatterMediumStyle;
-    dateFormatter.timeStyle = NSDateFormatterMediumStyle;
-    self.tweetedAtLabel.text = [dateFormatter stringFromDate:self.tweet.createdAt];
+    self.tweetedAtLabel.text = self.tweet.tweetedAt;
     [self.messageLabel sizeToFit];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.tweet getImageWithCompletion:^(UIImage *image) {

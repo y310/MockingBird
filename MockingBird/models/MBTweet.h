@@ -12,4 +12,5 @@
 + (NSString *)parseClassName;
 - (void)getImageWithCompletion:(void(^)(UIImage *))completion;
 - (void)setImage:(UIImage *)image withCompletion:(void(^)())completion;
+- (NSString *)tweetedAt;
 @end

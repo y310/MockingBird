@@ -8,6 +8,7 @@
 
 #import "MBLoginViewController.h"
 #import "MBTweet.h"
+#import "MBTweetCell.h"
 #import "MBTweetDetailViewController.h"
 #import "MBTweetViewController.h"
 #import "MBTweetsTableViewController.h"
@@ -134,6 +135,12 @@
     return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MBTweet *tweet = self.tweets[indexPath.row];
+    return [MBTweetCell heightForMessage:tweet.message];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.tweets.count;
@@ -142,8 +149,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MBTweet *tweet = self.tweets[indexPath.row];
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.textLabel.text = tweet.message;
+    MBTweetCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.tweet = tweet;
     return cell;
 }
 

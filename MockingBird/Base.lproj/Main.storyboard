@@ -8,19 +8,64 @@
         <scene sceneID="GIF-lt-Ike">
             <objects>
                 <tableViewController id="iPH-8l-gth" customClass="MBTweetsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="abn-3A-qfs">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" id="abn-3A-qfs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="QCo-FY-j5c">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="75" id="QCo-FY-j5c" customClass="MBTweetCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QCo-FY-j5c" id="ndG-E5-uRa">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byj-G5-9Bf">
+                                            <rect key="frame" x="20" y="5" width="267" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="5Kl-GP-GPF"/>
+                                                <constraint firstAttribute="width" constant="267" id="Y0o-tM-Kfx"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="267" translatesAutoresizingMaskIntoConstraints="NO" id="qjD-mE-44O">
+                                            <rect key="frame" x="20" y="25" width="267" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="267" id="P9O-tf-RUP"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfv-Di-azJ">
+                                            <rect key="frame" x="20" y="54" width="267" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="8GT-NQ-nFB"/>
+                                                <constraint firstAttribute="width" constant="267" id="Knh-dF-VWF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xfv-Di-azJ" firstAttribute="top" secondItem="qjD-mE-44O" secondAttribute="bottom" constant="5" id="35m-2w-oRq"/>
+                                        <constraint firstAttribute="bottom" secondItem="xfv-Di-azJ" secondAttribute="bottom" constant="5" id="Ftf-TP-weA"/>
+                                        <constraint firstItem="qjD-mE-44O" firstAttribute="top" secondItem="Byj-G5-9Bf" secondAttribute="bottom" constant="5" id="IJZ-mc-Ypl"/>
+                                        <constraint firstItem="xfv-Di-azJ" firstAttribute="leading" secondItem="ndG-E5-uRa" secondAttribute="leading" constant="20" id="ezz-iW-alx"/>
+                                        <constraint firstItem="Byj-G5-9Bf" firstAttribute="top" secondItem="ndG-E5-uRa" secondAttribute="top" constant="5" id="izp-HM-vg3"/>
+                                        <constraint firstItem="Byj-G5-9Bf" firstAttribute="leading" secondItem="ndG-E5-uRa" secondAttribute="leading" constant="20" id="qWt-4S-glx"/>
+                                        <constraint firstItem="qjD-mE-44O" firstAttribute="leading" secondItem="ndG-E5-uRa" secondAttribute="leading" constant="20" id="wzw-CZ-pWw"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="messageLabel" destination="qjD-mE-44O" id="K7I-f9-8u1"/>
+                                    <outlet property="tweetedAtLabel" destination="xfv-Di-azJ" id="Eqr-2f-eGV"/>
+                                    <outlet property="usernameLabel" destination="Byj-G5-9Bf" id="qT3-4f-UxD"/>
                                     <segue destination="GmN-01-ExF" kind="push" identifier="showDetail" id="AIR-uS-qWd"/>
                                 </connections>
                             </tableViewCell>
