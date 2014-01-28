@@ -7,6 +7,7 @@
 //
 
 #import "MBAppDelegate.h"
+#import "MBConstants.h"
 #import "MBTweet.h"
 
 @implementation MBAppDelegate
@@ -17,10 +18,29 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [Parse setApplicationId:[userDefaults stringForKey:@"app_id"]
                   clientKey:[userDefaults stringForKey:@"client_key"]];
+    [application registerForRemoteNotificationTypes:
+     UIRemoteNotificationTypeBadge |
+     UIRemoteNotificationTypeAlert |
+     UIRemoteNotificationTypeSound];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
-							
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
+{
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:newDeviceToken];
+    [currentInstallation addUniqueObject:@"message" forKey:@"channels"];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:MBPushNotificationReceived object:userInfo];
+    [application setApplicationIconBadgeNumber:0];
+    [PFPush handlePush:userInfo];
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

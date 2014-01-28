@@ -56,6 +56,10 @@ NSString *const MBTweetFailureNotification = @"MBTweetFailureNotification";
         if (error) {
             [[NSNotificationCenter defaultCenter] postNotificationName:MBTweetFailureNotification object:self.tweet];
         } else {
+            PFPush *push = [[PFPush alloc] init];
+            [push setChannel:@"message"];
+            [push setData:@{@"alert":self.tweet.message, @"sound":@"default"}];
+            [push sendPushInBackground];
             [[NSNotificationCenter defaultCenter] postNotificationName:MBTweetSuccessNotification object:self.tweet];
         }
     }];

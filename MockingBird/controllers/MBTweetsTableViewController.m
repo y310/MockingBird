@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 mito. All rights reserved.
 //
 
+#import "MBConstants.h"
 #import "MBLoginViewController.h"
 #import "MBTweet.h"
 #import "MBTweetCell.h"
@@ -39,6 +40,11 @@
                                              selector:@selector(_tweetFailed:)
                                                  name:MBTweetFailureNotification
                                                object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(_refresh)
+                                                 name:MBPushNotificationReceived
+                                               object:nil];
+
     [self.refreshControl addTarget:self
                             action:@selector(_refresh)
                   forControlEvents:UIControlEventValueChanged];
