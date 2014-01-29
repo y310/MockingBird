@@ -41,7 +41,7 @@
                                                  name:MBTweetFailureNotification
                                                object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(_refresh)
+                                             selector:@selector(_pushReceived:)
                                                  name:MBPushNotificationReceived
                                                object:nil];
 
@@ -117,6 +117,15 @@
 
 - (void)_tweetFailed:(NSNotification *)notification
 {
+}
+
+- (void)_pushReceived:(NSNotification *)notification
+{
+    NSDictionary *payload = notification.object;
+    if (![payload[@"sender"] isEqualToString:[PFUser currentUser].objectId]) {
+        [self _refresh];
+        [PFPush handlePush:payload];
+    }
 }
 
 - (void)_refresh
