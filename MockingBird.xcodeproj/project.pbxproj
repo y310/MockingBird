@@ -37,6 +37,7 @@
 		464E05F01893E84400BE5AB4 /* MBTweetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05EF1893E84400BE5AB4 /* MBTweetDetailViewController.m */; };
 		464E05F31896AC8B00BE5AB4 /* MBTweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05F21896AC8B00BE5AB4 /* MBTweetCell.m */; };
 		464E05F61897F89E00BE5AB4 /* MBConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 464E05F51897F89E00BE5AB4 /* MBConstants.m */; };
+		46C4FB881898AB650098C8AA /* MBColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C4FB871898AB650098C8AA /* MBColorUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,8 @@
 		464E05F21896AC8B00BE5AB4 /* MBTweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBTweetCell.m; sourceTree = "<group>"; };
 		464E05F41897F89E00BE5AB4 /* MBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBConstants.h; sourceTree = "<group>"; };
 		464E05F51897F89E00BE5AB4 /* MBConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBConstants.m; sourceTree = "<group>"; };
+		46C4FB861898AB650098C8AA /* MBColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBColorUtil.h; sourceTree = "<group>"; };
+		46C4FB871898AB650098C8AA /* MBColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBColorUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				464E05A21893942B00BE5AB4 /* MBAppDelegate.m */,
 				464E05F41897F89E00BE5AB4 /* MBConstants.h */,
 				464E05F51897F89E00BE5AB4 /* MBConstants.m */,
+				46C4FB861898AB650098C8AA /* MBColorUtil.h */,
+				46C4FB871898AB650098C8AA /* MBColorUtil.m */,
 				464E05A41893942B00BE5AB4 /* Main.storyboard */,
 				464E05AA1893942B00BE5AB4 /* Images.xcassets */,
 				464E05991893942B00BE5AB4 /* Supporting Files */,
@@ -346,6 +351,7 @@
 			files = (
 				464E05F31896AC8B00BE5AB4 /* MBTweetCell.m in Sources */,
 				464E059F1893942B00BE5AB4 /* main.m in Sources */,
+				46C4FB881898AB650098C8AA /* MBColorUtil.m in Sources */,
 				464E05ED1893AC3D00BE5AB4 /* MBTweetViewController.m in Sources */,
 				464E05E61893AAE000BE5AB4 /* MBLoginViewController.m in Sources */,
 				464E05F61897F89E00BE5AB4 /* MBConstants.m in Sources */,
@@ -571,6 +577,7 @@
 				464E05C31893942B00BE5AB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		464E05C41893942B00BE5AB4 /* Build configuration list for PBXNativeTarget "MockingBirdTests" */ = {
 			isa = XCConfigurationList;
@@ -579,6 +586,7 @@
 				464E05C61893942B00BE5AB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

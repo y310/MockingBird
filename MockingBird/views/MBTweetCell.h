@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *tweetedAtLabel;
+@property (weak, nonatomic) IBOutlet UIView *colorView;
 @property (weak, nonatomic) MBTweet *tweet;
 @end

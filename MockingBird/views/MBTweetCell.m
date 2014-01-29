@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 mito. All rights reserved.
 //
 
+#import "MBColorUtil.h"
 #import "MBTweet.h"
 #import "MBTweetCell.h"
 
@@ -26,6 +27,7 @@
     self.messageLabel.text = _tweet.message;
     self.usernameLabel.text = _tweet.user.username;
     self.tweetedAtLabel.text = _tweet.tweetedAt;
+    self.colorView.backgroundColor = [MBColorUtil colorByName:_tweet.user[@"color"]];
     [self updateConstraintsIfNeeded];
 }
 
@@ -38,6 +40,9 @@
     CGRect rect = self.tweetedAtLabel.frame;
     rect.origin.y = CGRectGetMaxY(self.messageLabel.frame) + 5.0f;
     self.tweetedAtLabel.frame = rect;
+    rect = self.colorView.frame;
+    rect.origin.y = CGRectGetMidY(self.bounds) - rect.size.height / 2;
+    self.colorView.frame = rect;
 }
 
 @end

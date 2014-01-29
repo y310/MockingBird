@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 mito. All rights reserved.
 //
 
+#import "MBColorUtil.h"
 #import "MBConstants.h"
 #import "MBLoginViewController.h"
 #import "MBTweet.h"
@@ -101,6 +102,8 @@
     self.loginOrLogoutBarButtonItem.tag = 0;
     self.loginOrLogoutBarButtonItem.title = @"Login";
     self.navigationItem.rightBarButtonItem = nil;
+    self.navigationController.navigationBar.barTintColor = [UIColor clearColor];
+    self.navigationController.navigationBar.tintColor = [MBColorUtil defaultColor];
 }
 
 - (void)_setStateLogout
@@ -108,6 +111,9 @@
     self.loginOrLogoutBarButtonItem.tag = 1;
     self.loginOrLogoutBarButtonItem.title = @"Logout";
     self.navigationItem.rightBarButtonItem = self.tweetBarButtonItem;
+    NSString *color = [PFUser currentUser][@"color"];
+    self.navigationController.navigationBar.barTintColor = [MBColorUtil colorByName:color];
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 }
 
 - (void)_tweetSucceeded:(NSNotification *)notification
@@ -141,6 +147,27 @@
             [self.refreshControl endRefreshing];
         }
     }];
+}
+
+- (UIColor *)_defaultColor
+{
+    return [UIColor colorWithRed:0.0 green:122.0/255.0 blue:1.0 alpha:1.0];
+}
+
+- (UIColor *)_blueColor
+{
+    return [UIColor colorWithRed:82/255.0f
+                           green:179/255.0f
+                            blue:179/255.0f
+                           alpha:1.0f];
+}
+
+- (UIColor *)_greenColor
+{
+    return [UIColor colorWithRed:97/255.0f
+                           green:180/255.0f
+                            blue:97/255.0f
+                           alpha:1.0f];
 }
 
 #pragma mark UITableViewDelegate
