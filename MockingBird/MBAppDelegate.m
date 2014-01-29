@@ -38,7 +38,6 @@
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:MBPushNotificationReceived object:userInfo];
     [application setApplicationIconBadgeNumber:0];
-    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

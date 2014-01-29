@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qva-oM-cLq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qva-oM-cLq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -121,15 +121,15 @@
                         <viewControllerLayoutGuide type="bottom" id="zDU-sN-pfB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iHd-O4-T1j">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="368"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQt-xF-oTA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="368"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-TX-Rdi">
-                                        <rect key="frame" x="20" y="80" width="76" height="21"/>
+                                        <rect key="frame" x="20" y="80" width="280" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -145,7 +145,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014/01/25 14:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzV-xF-YP4">
-                                        <rect key="frame" x="20" y="140" width="99" height="15"/>
+                                        <rect key="frame" x="20" y="140" width="280" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,34 +155,39 @@
                                         <rect key="frame" x="20" y="163" width="280" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="170" id="RfI-ia-qiS"/>
+                                            <constraint firstAttribute="height" constant="170" id="h44-We-K2p"/>
+                                            <constraint firstAttribute="width" constant="280" id="ne5-zo-jdq"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="PhA-q4-tVx" firstAttribute="top" secondItem="IzV-xF-YP4" secondAttribute="bottom" constant="8" symbolic="YES" id="1eG-it-2vH"/>
-                                    <constraint firstItem="PhA-q4-tVx" firstAttribute="trailing" secondItem="inK-Bd-aWg" secondAttribute="trailing" id="79R-w8-4HB"/>
                                     <constraint firstItem="TZK-TX-Rdi" firstAttribute="leading" secondItem="gQt-xF-oTA" secondAttribute="leading" constant="20" id="Ad1-FN-SN9"/>
-                                    <constraint firstAttribute="height" constant="568" id="GhB-3e-QqN"/>
                                     <constraint firstItem="IzV-xF-YP4" firstAttribute="top" secondItem="inK-Bd-aWg" secondAttribute="bottom" constant="8" id="I1F-pw-CH6"/>
-                                    <constraint firstItem="PhA-q4-tVx" firstAttribute="leading" secondItem="IzV-xF-YP4" secondAttribute="leading" id="OhY-Tg-3Eg"/>
                                     <constraint firstAttribute="trailing" secondItem="inK-Bd-aWg" secondAttribute="trailing" constant="20" id="Our-Oj-gIv"/>
+                                    <constraint firstItem="PhA-q4-tVx" firstAttribute="leading" secondItem="gQt-xF-oTA" secondAttribute="leading" constant="20" id="Uk5-Vq-6Vz"/>
                                     <constraint firstItem="IzV-xF-YP4" firstAttribute="leading" secondItem="gQt-xF-oTA" secondAttribute="leading" constant="20" id="Xnm-Xe-zQh"/>
                                     <constraint firstItem="TZK-TX-Rdi" firstAttribute="top" secondItem="gQt-xF-oTA" secondAttribute="top" constant="80" id="YmX-Mq-VYe"/>
-                                    <constraint firstAttribute="bottom" secondItem="PhA-q4-tVx" secondAttribute="bottom" constant="235" id="as5-Gh-jzW"/>
-                                    <constraint firstAttribute="width" constant="320" id="f5s-bP-yxb"/>
+                                    <constraint firstItem="IzV-xF-YP4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gQt-xF-oTA" secondAttribute="leading" constant="20" id="d1i-nq-eLQ"/>
                                     <constraint firstItem="inK-Bd-aWg" firstAttribute="leading" secondItem="gQt-xF-oTA" secondAttribute="leading" constant="20" id="iDq-y0-ohj"/>
                                     <constraint firstItem="inK-Bd-aWg" firstAttribute="top" secondItem="TZK-TX-Rdi" secondAttribute="bottom" constant="8" id="je0-dM-bxK"/>
+                                    <constraint firstAttribute="trailing" secondItem="PhA-q4-tVx" secondAttribute="trailing" constant="20" id="kss-mK-ahO"/>
+                                    <constraint firstAttribute="trailing" secondItem="TZK-TX-Rdi" secondAttribute="trailing" constant="20" id="lOc-kx-P11"/>
+                                    <constraint firstAttribute="trailing" secondItem="IzV-xF-YP4" secondAttribute="trailing" constant="20" id="mAR-Gl-idf"/>
+                                    <constraint firstAttribute="bottom" secondItem="PhA-q4-tVx" secondAttribute="bottom" constant="20" id="ob8-zf-CPa"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zDU-sN-pfB" firstAttribute="top" secondItem="gQt-xF-oTA" secondAttribute="bottom" id="6Ia-Uh-0Zf"/>
                             <constraint firstItem="gQt-xF-oTA" firstAttribute="top" secondItem="iHd-O4-T1j" secondAttribute="top" id="HYY-q5-oG2"/>
+                            <constraint firstAttribute="trailing" secondItem="gQt-xF-oTA" secondAttribute="trailing" id="gG0-Ni-2e3"/>
                             <constraint firstItem="gQt-xF-oTA" firstAttribute="leading" secondItem="iHd-O4-T1j" secondAttribute="leading" id="wNC-uE-dpk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tweet" id="xkB-Yn-EvM"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="PhA-q4-tVx" id="zXV-TC-CJT"/>
                         <outlet property="messageLabel" destination="inK-Bd-aWg" id="tfK-Z8-jGA"/>

@@ -22,15 +22,10 @@
     self.messageLabel.text = self.tweet.message;
     self.tweetedAtLabel.text = self.tweet.tweetedAt;
     [self.messageLabel sizeToFit];
-    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.tweet getImageWithCompletion:^(UIImage *image) {
         self.imageView.image = image;
     }];
-}
-
-- (void)viewDidLayoutSubviews
-{
-    self.scollView.contentSize = CGSizeMake(320, CGRectGetMaxY(self.imageView.frame) + 40.0f);
 }
 
 - (void)didReceiveMemoryWarning
